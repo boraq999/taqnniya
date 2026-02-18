@@ -5,8 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>تقنية - حلول تقنية متكاملة</title>
+    
+    <!-- Preconnect للخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preload للصور المهمة -->
+    <link rel="preload" as="image" href="images/LOGO.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -29,7 +36,7 @@
         <div class="header-container">
             <a href="#" class="header-logo">
                 <div class="logo-glow"></div>
-                <img src="images/LOGO.png" alt="لوغو تقنية">
+                <img src="images/LOGO.png" alt="لوغو تقنية" loading="eager">
                 <span class="header-brand-name">تقنية</span>
             </a>
 
@@ -95,7 +102,7 @@
                 <div class="logo-ring ring-1"></div>
                 <div class="logo-ring ring-2"></div>
                 <div class="logo-ring ring-3"></div>
-                <img src="images/LOGO.png" alt="تقنية" class="main-logo">
+                <img src="images/LOGO.png" alt="تقنية" class="main-logo" loading="eager">
             </div>
         </div>
     </section>
@@ -104,16 +111,16 @@
         <div class="partners-container">
             <div class="partners-grid">
                 <div class="partner-card">
-                    <img src="images/cline/sipes-logo.png" alt="Sipes">
+                    <img src="images/cline/sipes-logo.png" alt="Sipes" loading="lazy">
                 </div>
                 <div class="partner-card">
-                    <img src="images/cline/TETCO-ENGLISH-e1732365158152.png" alt="TETCO">
+                    <img src="images/cline/TETCO-ENGLISH-e1732365158152.png" alt="TETCO" loading="lazy">
                 </div>
                 <div class="partner-card">
-                    <img src="images/cline/العودة.png" alt="العودة">
+                    <img src="images/cline/العودة.png" alt="العودة" loading="lazy">
                 </div>
                 <div class="partner-card">
-                    <img src="images/cline/النخلة.png" alt="النخلة">
+                    <img src="images/cline/النخلة.png" alt="النخلة" loading="lazy">
                 </div>
             </div>
         </div>
@@ -123,7 +130,7 @@
         <div class="cbl-container">
             <div class="cbl-image-content">
                 <div class="cbl-glow"></div>
-                <img src="images/CBL/CBL.png" alt="CBL">
+                <img src="images/CBL/CBL.png" alt="CBL" loading="lazy">
             </div>
             <div class="cbl-text-content">
                 <span class="section-badge">الامتثال المصرفي</span>
@@ -181,7 +188,7 @@
             <div class="portfolio-grid">
                 <a href="https://sipes.ly/" target="_blank" class="portfolio-item" data-index="1">
                     <div class="portfolio-image">
-                        <img src="images/portfolio/sipes-site.png" alt="Sipes">
+                        <img src="images/portfolio/sipes-site.png" alt="Sipes" loading="lazy">
                         <div class="portfolio-overlay">
                             <i class="fas fa-external-link-alt"></i>
                             <h3>Sipes</h3>
@@ -191,7 +198,7 @@
 
                 <a href="https://tetco.ly/" target="_blank" class="portfolio-item" data-index="2">
                     <div class="portfolio-image">
-                        <img src="images/portfolio/tetco-site.png" alt="TETCO">
+                        <img src="images/portfolio/tetco-site.png" alt="TETCO" loading="lazy">
                         <div class="portfolio-overlay">
                             <i class="fas fa-external-link-alt"></i>
                             <h3>TETCO</h3>
@@ -202,7 +209,7 @@
                 <a href="https://ofifice-alalem.github.io/alaouda-deploy/" target="_blank" class="portfolio-item"
                     data-index="3">
                     <div class="portfolio-image">
-                        <img src="images/portfolio/alaouda-site.png" alt="العودة">
+                        <img src="images/portfolio/alaouda-site.png" alt="العودة" loading="lazy">
                         <div class="portfolio-overlay">
                             <i class="fas fa-external-link-alt"></i>
                             <h3>العودة</h3>
@@ -213,7 +220,7 @@
                 <a href="https://ofifice-alalem.github.io/Yaseen-v2/" target="_blank" class="portfolio-item"
                     data-index="4">
                     <div class="portfolio-image">
-                        <img src="images/portfolio/Yaseen-site.png" alt="ياسين">
+                        <img src="images/portfolio/Yaseen-site.png" alt="ياسين" loading="lazy">
                         <div class="portfolio-overlay">
                             <i class="fas fa-external-link-alt"></i>
                             <h3>ياسين</h3>
@@ -237,7 +244,7 @@
                 <div class="service-card">
                     <div class="top-section">
                         <div class="service-logo">HOSTING</div>
-                        <img src="images/الخدمات/ايكون استضافة.png" alt="استضافة">
+                        <img src="images/الخدمات/ايكون استضافة.png" alt="استضافة" loading="lazy">
                     </div>
                     <div class="bottom-section">
                         <h3 class="service-title">استضافة</h3>
@@ -249,7 +256,7 @@
                 <div class="service-card featured">
                     <div class="top-section">
                         <div class="service-logo">DESIGN</div>
-                        <img src="images/الخدمات/ايكون تصميم UI UX.png" alt="تصميم UI/UX">
+                        <img src="images/الخدمات/ايكون تصميم UI UX.png" alt="تصميم UI/UX" loading="lazy">
                     </div>
                     <div class="bottom-section">
                         <h3 class="service-title">تصميم UI/UX</h3>
@@ -261,7 +268,7 @@
                 <div class="service-card">
                     <div class="top-section">
                         <div class="service-logo">DEVELOPMENT</div>
-                        <img src="images/الخدمات/ايكون تطوير مواقع.png" alt="تطوير المواقع">
+                        <img src="images/الخدمات/ايكون تطوير مواقع.png" alt="تطوير المواقع" loading="lazy">
                     </div>
                     <div class="bottom-section">
                         <h3 class="service-title">تطوير المواقع</h3>
@@ -342,7 +349,7 @@
                     <div class="step-number">01</div>
                     <div class="step-content">
                         <div class="step-icon">
-                            <img src="images/HowWeWork/Consultation & Analysis.png" alt="استشارة">
+                            <img src="images/HowWeWork/Consultation & Analysis.png" alt="استشارة" loading="lazy">
                         </div>
                         <h3>الاستشارة والتحليل</h3>
                         <p>نفهم احتياجاتك ونحلل متطلبات مشروعك بدقة</p>
@@ -353,7 +360,7 @@
                     <div class="step-number">02</div>
                     <div class="step-content">
                         <div class="step-icon">
-                            <img src="images/HowWeWork/Planning & UIUX Design.png" alt="تصميم">
+                            <img src="images/HowWeWork/Planning & UIUX Design.png" alt="تصميم" loading="lazy">
                         </div>
                         <h3>تصميم UI/UX</h3>
                         <p>نصمم واجهات جذابة وسهلة الاستخدام</p>
@@ -364,7 +371,7 @@
                     <div class="step-number">03</div>
                     <div class="step-content">
                         <div class="step-icon">
-                            <img src="images/HowWeWork/Development & Coding.png" alt="تطوير">
+                            <img src="images/HowWeWork/Development & Coding.png" alt="تطوير" loading="lazy">
                         </div>
                         <h3>التطوير والبرمجة</h3>
                         <p>نبني المشروع بأحدث التقنيات والمعايير</p>
@@ -375,7 +382,7 @@
                     <div class="step-number">04</div>
                     <div class="step-content">
                         <div class="step-icon">
-                            <img src="images/HowWeWork/Testing & Launch.png" alt="إطلاق">
+                            <img src="images/HowWeWork/Testing & Launch.png" alt="إطلاق" loading="lazy">
                         </div>
                         <h3>الاختبار والإطلاق</h3>
                         <p>نختصص بعناية ثم نطلق مشروعك للعالم</p>
@@ -414,7 +421,7 @@
                         </div>
                         <div class="method-info">
                             <span class="method-label">اتصل بنا</span>
-                            <span class="method-value">+218 91 123 4567</span>
+                            <span class="method-value">+218 91 470 49 47</span>
                         </div>
                     </a>
 
@@ -434,7 +441,7 @@
                         </div>
                         <div class="method-info">
                             <span class="method-label">واتساب</span>
-                            <span class="method-value">+218 91 123 4567</span>
+                            <span class="method-value">+218 92 544 5054</span>
                         </div>
                     </a>
                 </div>
@@ -455,7 +462,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="images/LOGO.png" alt="تقنية">
+                        <img src="images/LOGO.png" alt="تقنية" loading="lazy">
                         <span>تقنية</span>
                     </div>
                     <p>نحن شركة رائدة في مجال التقنية والتطوير الرقمي، نقدم حلولاً مبتكرة ومتطورة لعملائنا.</p>
