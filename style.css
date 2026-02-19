@@ -1839,7 +1839,7 @@ section {
         right: -100%;
         width: 82%;
         max-width: 340px;
-        height: 100dvh;
+        height: 90vh;
         background: var(--bg-dark);
         flex-direction: column;
         justify-content: flex-start;
