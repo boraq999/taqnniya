@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>تقنية - حلول تقنية متكاملة</title>
-    
+
     <!-- Preconnect للخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
+
     <!-- Preload للصور المهمة -->
     <link rel="preload" as="image" href="images/LOGO.png">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -41,7 +41,7 @@
             </a>
 
             <nav id="nav">
-                <a href="#" class="active">الرئيسية</a>
+                <a href="/#" class="active">الرئيسية</a>
                 <a href="#portfolio">أعمالنا</a>
                 <a href="#services">خدماتنا</a>
                 <a href="#how-we-work">كيف نعمل</a>
@@ -58,7 +58,7 @@
 
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section class="landing">
+    <section class="landing" id="#">
         <div class="bg-grid"></div>
         <div class="landing-content">
             <div class="landing-text">
@@ -176,7 +176,7 @@
         </div>
     </section>
 
-        <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="bg-grid"></div>
         <div class="portfolio-container">
             <div class="section-header">
@@ -523,7 +523,8 @@
         const nav = document.getElementById('nav');
         const mobileOverlay = document.getElementById('mobileOverlay');
 
-        mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             mobileMenuBtn.classList.toggle('active');
             nav.classList.toggle('active');
             mobileOverlay.classList.toggle('active');

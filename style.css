@@ -293,8 +293,6 @@ nav a.header-cta:hover {
 
 body.menu-open {
     overflow: hidden;
-    position: fixed;
-    width: 100%;
 }
 
 .mobile-overlay {
@@ -1762,7 +1760,7 @@ section {
 
     nav {
         position: fixed;
-        top: 150%;
+        top: 80px;
         right: -100%;
         width: 85%;
         max-width: 320px;
@@ -1906,7 +1904,7 @@ section {
     .service-card,
     .why-card,
     .partner-card {
-        padding: 12px ;
+        padding: 12px;
     }
 
     .cbl-requirements,
@@ -2048,15 +2046,18 @@ section {
     .icon-3 {
         /* display: none; */
     }
-    .icon-1{
+
+    .icon-1 {
         top: 0;
         right: 0;
     }
-    .icon-2{
+
+    .icon-2 {
         bottom: 100px;
         left: -40px;
     }
-    .icon-3{
+
+    .icon-3 {
         bottom: -20px;
     }
 
@@ -2105,7 +2106,7 @@ section {
         padding: 28px 20px;
     }
 
-    .newsletter-form{
+    .newsletter-form {
         flex-direction: column;
     }
 
