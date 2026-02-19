@@ -41,10 +41,18 @@
             </a>
 
             <nav id="nav">
-                <a href="/#" class="active">الرئيسية</a>
-                <a href="#portfolio">أعمالنا</a>
-                <a href="#services">خدماتنا</a>
-                <a href="#how-we-work">كيف نعمل</a>
+                <div class="mobile-nav-header">
+                    <img src="images/LOGO.png" alt="تقنية" class="mobile-nav-logo">
+                    <h3 class="mobile-nav-brand">تقنية</h3>
+                    <p class="mobile-nav-tagline">حلول تقنية متكاملة</p>
+                </div>
+                <div class="mobile-nav-divider"></div>
+                <div class="mobile-nav-links">
+                    <a href="/#" class="active">الرئيسية</a>
+                    <a href="#portfolio">أعمالنا</a>
+                    <a href="#services">خدماتنا</a>
+                    <a href="#how-we-work">كيف نعمل</a>
+                </div>
                 <a href="#contact" class="header-cta">تواصل معنا</a>
             </nav>
 
@@ -518,25 +526,42 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
+        // Mobile Menu Toggle - Premium with animation reset
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const nav = document.getElementById('nav');
         const mobileOverlay = document.getElementById('mobileOverlay');
 
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            mobileMenuBtn.classList.toggle('active');
-            nav.classList.toggle('active');
-            mobileOverlay.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        });
+        function openMenu() {
+            mobileMenuBtn.classList.add('active');
+            nav.classList.add('active');
+            mobileOverlay.classList.add('active');
+            document.body.classList.add('menu-open');
+            // Reset animations for staggered reveal
+            const animatedEls = nav.querySelectorAll('a, .mobile-nav-header, .mobile-nav-divider');
+            animatedEls.forEach(el => {
+                el.style.animation = 'none';
+                el.offsetHeight; // trigger reflow
+                el.style.animation = '';
+            });
+        }
 
-        mobileOverlay.addEventListener('click', () => {
+        function closeMenu() {
             mobileMenuBtn.classList.remove('active');
             nav.classList.remove('active');
             mobileOverlay.classList.remove('active');
             document.body.classList.remove('menu-open');
+        }
+
+        mobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (nav.classList.contains('active')) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
         });
+
+        mobileOverlay.addEventListener('click', closeMenu);
 
         // Header scroll effect
         const header = document.getElementById('header');
@@ -559,10 +584,7 @@
                         block: 'start'
                     });
                     // Close mobile menu if open
-                    mobileMenuBtn.classList.remove('active');
-                    nav.classList.remove('active');
-                    mobileOverlay.classList.remove('active');
-                    document.body.classList.remove('menu-open');
+                    closeMenu();
                 }
             });
         });
