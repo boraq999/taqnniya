@@ -1231,6 +1231,7 @@ section {
 .method-info {
     display: flex;
     flex-direction: column;
+    text-align: right;
 }
 
 .method-label {
@@ -1240,6 +1241,7 @@ section {
 
 .method-value {
     font-weight: 600;
+    direction: ltr !important;
 }
 
 .contact-location {
